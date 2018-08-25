@@ -16,6 +16,8 @@ import {environment} from '../environments/environment.prod';
 import {AngularFirestoreModule} from 'angularfire2/firestore';
 import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireStorageModule} from 'angularfire2/storage';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import {AuthService} from './services/auth.service';
 
 
 @NgModule({
@@ -26,7 +28,8 @@ import {AngularFireStorageModule} from 'angularfire2/storage';
     PatientSignUpComponent,
     DoctorSignUpComponent,
     PatientProfileComponent,
-    DoctorProfileComponent
+    DoctorProfileComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,7 @@ import {AngularFireStorageModule} from 'angularfire2/storage';
     AngularFireAuthModule,
     AngularFireStorageModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
