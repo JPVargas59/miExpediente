@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-info">
+  <div class="container">
+    <a routerLink="/" class="navbar-brand">Mi Expediente</a>
+    <button class="navbar-toggler"  type="button" data-toggle="collapse" data-target="#navbarMain">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <!--
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a routerLink="" class="nav-link">Registro</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="monitor" class="nav-link">Monitor</a>
+        </li>
+      </ul>
+      -->
+      <ul class="navbar mar-auto">
+
+      </ul>
+      <ul *ngIf="!isLoggedIn" class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a routerLink="mae-login" class="nav-link">Inicia sesión</a>
+        </li>
+      </ul>
+      <ul *ngIf="isLoggedIn" class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <div class="dropdown">
+            <a class="btn btn-primary dropdown-toggle nav-link" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ loggedInUser }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" routerLink="/mae-profile">Perfil</a>
+              <a class="dropdown-item" (click)="logOut()" routerLink="/mae-login">Cerrar sesión</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
