@@ -1,6 +1,6 @@
 import { Treatment } from './Treatment';
 import {LabStudies} from './LabStudies';
-import {Consults} from './Consults';
+import {Consult} from './Consult';
 
 export interface Patient {
   basicInfo: {
@@ -12,7 +12,7 @@ export interface Patient {
     email?: string;
   };
   currentTreatment?: Treatment[];
-  lastConsults?: Consults[];
+  lastConsults?: Consult[];
   lastStudies?: LabStudies[];
   others?: Object;
 }

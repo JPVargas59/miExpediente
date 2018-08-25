@@ -1,6 +1,6 @@
 import {Treatment} from './Treatment';
 
-export interface Consults {
+export interface Consult {
   doctor: string;
   specialty: string;
   treatment?: string;

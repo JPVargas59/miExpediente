@@ -18,6 +18,7 @@ import {AngularFireAuthModule} from 'angularfire2/auth';
 import {AngularFireStorageModule} from 'angularfire2/storage';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import {AuthService} from './services/auth.service';
+import {PatientService} from './services/patient.service';
 
 
 @NgModule({
@@ -40,7 +41,7 @@ import {AuthService} from './services/auth.service';
     AngularFireAuthModule,
     AngularFireStorageModule
   ],
-  providers: [AuthService],
+  providers: [AuthService, PatientService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
